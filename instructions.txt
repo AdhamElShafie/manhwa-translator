@@ -1,0 +1,18 @@
+google cloud app engine
+git clone \
+    https://github.com/GoogleCloudPlatform/appengine-try-java
+cd appengine-try-java
+cat \
+    src/main/java/myapp/DemoServlet.java
+cat pom.xml
+mvn appengine:run  this is to test app before deploying (then press "Web Preview" button)
+gcloud app create (IF DONE ALREADY DON'T DO IT AGAIN!)
+
+gcloud config set project \
+    ivory-setup-291106			(pick which project to use)
+mvn appengine:deploy		(deployyy)
+
+
+$env:GOOGLE_APPLICATION_CREDENTIALS="C:\Users\Adham\Desktop\google project start\appenginetest.json"
+
+gcloud auth application-default login
