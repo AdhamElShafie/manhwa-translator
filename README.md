@@ -6,7 +6,7 @@ Incomplete.
 So far it can:  
 	- detect text in an image.  
 	- remove said text and (somewhat) fill in the missing background.  
-	- add new text to the same location as old text (somewhat).  
+	- add new text to the same location as old text and auto adjusts it to fit box.
 
 Missing:  
 	- actual manhwa-style translation.
