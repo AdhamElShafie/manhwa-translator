@@ -25,7 +25,7 @@ def get_new_img(box, img):
     inverted_thresh = 255-thresh
 
     dilate = cv2.dilate(inverted_thresh, kernel, iterations=5)
-    cv2.imshow("dilate", dilate)
+    show("dilate", dilate)
 
     # cnts = cv2.findContours(dilate, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     dst = cv2.inpaint(imgbox, dilate, 7, cv2.INPAINT_NS)
@@ -34,13 +34,11 @@ def get_new_img(box, img):
     img[box_y0-sizediff:box_y1+sizediff, box_x0-sizediff:box_x1+sizediff] = dst
 
     show("final", img)
-    cv2.waitKey(0)
+    #cv2.waitKey(0)
     
     return img
 
 
 def show(name, inp):
-    cv2.imshow(name, inp)
-
-
-
+    return
+    #cv2.imshow(name, inp)
