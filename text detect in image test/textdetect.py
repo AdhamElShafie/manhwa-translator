@@ -17,7 +17,7 @@ from PIL  import ImageFont, ImageDraw
 reader = eo.Reader(['ko'])
 
 # fname = "ch32 first text original.jpg"
-fname = "manhwa trial cleaned.jpg"
+fname = "ch32 raw test.jpg"
 
 
 #result = reader.readtext("manhwa trial cleaned.jpg")
@@ -34,7 +34,8 @@ img = removetext.get_new_img(box, img)
 
 #text = result[0][1]
 #text to be outputted, should be the translated text, but placeholder for now
-text = "I don’t know what changes have happened to you."
+# text = "I don’t know what changes have happened to you."
+text = "THAT'S...!!"
 # text = "ice arrow!!"
 
 #opencv has image in bgr so have to convert to rgb
@@ -58,16 +59,17 @@ boxWidth = box[1][0] - box[0][0]
 boxHeight = box[2][1] - box[1][1]
 # print("b", box, "w", boxWidth, "h", boxHeight)
 
-color = (255, 255, 255)
+# color = (255, 255, 255)
+color = (0,0,0)
 font = "Fonts\wildwordsbold.ttf"
 
-border = (True, (110, 0, 0, 255), 2)
+border = (True, (110, 0, 0, 255), 0)
 
 # print("size", image.size)
 
 image = textfill.write_text_to_box(tuple(box[0]), boxWidth, boxHeight, text, color, image, font, border)
 
-image.save("manhwa2 with new text write.png")
+image.save("proofpic.png")
 
  ############################################## TODO: get the same border and text color in original text so it matches
 #     #text border color
